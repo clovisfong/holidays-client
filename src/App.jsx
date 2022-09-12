@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-const SERVER = import.meta.env.VITE_SERVER; //connect 
+
+// connect backend and frontend localhost (deployment), 
+// connect backend(cyclic) and frontend(vercel) (production)
+const SERVER = import.meta.env.VITE_SERVER; 
 
 fetch(SERVER)
   .then((response) => response.json())
