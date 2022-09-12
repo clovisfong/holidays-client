@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+const SERVER = import.meta.env.VITE_SERVER;
+
+fetch(SERVER)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <h1> hello</h1>
+      <h1> Hello</h1>
     </div>
   )
 }
